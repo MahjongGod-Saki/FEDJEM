@@ -36,7 +36,8 @@ public static class IntSumReducer
   private IntWritable result = new IntWritable();
   public void reduce(Text key, Iterable<IntWritable> values,
                 Context context
-    int sum = 0; ) throws IOException, InterruptedException {
+                ) throws IOException, InterruptedException {
+    int sum = 0; 
     for (IntWritable val : values) {
       sum += val.get();
     }
